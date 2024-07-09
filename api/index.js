@@ -5,11 +5,11 @@ const app = express();
 app.use(express.json());
 
 
-app.get("/longresponse", (request, response) => {
+app.get("/longresponse", (request, response) => 
     setTimeout(() => {
         response.send({info: "this should take 15 seconds"})
     }, 15000)
- });
+ );
 
 
 // Define the port to listen on
