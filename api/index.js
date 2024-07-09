@@ -9,8 +9,8 @@ app.get("/", (req, res) => res.send("Express on Vercel"));
 
 app.get("/longresponse", (request, response) => 
     setTimeout(() => {
-        response.send({info: "this should take 15 seconds"})
-    }, 15000)
+        response.send({info: "this should take 9.999 seconds"})
+    }, 9999)
  );
 
 
