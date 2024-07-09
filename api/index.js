@@ -5,6 +5,8 @@ const app = express();
 app.use(express.json());
 
 
+app.get("/", (req, res) => res.send("Express on Vercel"));
+
 app.get("/longresponse", (request, response) => 
     setTimeout(() => {
         response.send({info: "this should take 15 seconds"})
