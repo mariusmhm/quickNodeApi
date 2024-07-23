@@ -12,6 +12,11 @@ app.get("/longresponse", (request, response) =>
         response.send({info: "this should take 9 seconds"})
     }, 9000)
  );
+app.get("/shorterresponse", (request, response) => 
+    setTimeout(() => {
+        response.send({info: "this should take 6.5 seconds"})
+    }, 6500)
+ );
 
 
 // Define the port to listen on
